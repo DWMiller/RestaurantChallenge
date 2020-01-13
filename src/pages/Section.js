@@ -13,10 +13,6 @@ function Section(props) {
     state => state.menu && state.sections.byName[sectionId]
   );
 
-  if (!section) {
-    return null;
-  }
-
   return (
     <div>
       <ItemsList>

@@ -18,10 +18,6 @@ const MenuContainer = styled.nav`
 function Menu() {
   const menu = useSelector(state => state.menu);
 
-  if (!menu) {
-    return null;
-  }
-
   return (
     <MenuContainer>
       <div className="menu_inner">

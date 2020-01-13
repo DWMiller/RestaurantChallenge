@@ -8,10 +8,6 @@ import Item from '../components/SectionItem';
 function Main() {
   const menu = useSelector(state => state.menu);
 
-  if (!menu) {
-    return null;
-  }
-
   return (
     <div>
       <ItemsList>

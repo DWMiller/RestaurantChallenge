@@ -1,24 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 import { dataLoaded } from './actions';
+import { dataSorter } from '../../utils/data';
 
 const itemsSlice = createSlice({
   name: 'items',
-  initialState: {},
-  reducers: {},
+  initialState: null,
   extraReducers: {
-    [dataLoaded]: (state, { payload }) => {
-      const items = {};
-
-      payload.items.forEach(item => {
-        items[item._id] = item;
-      });
-
-      return {
-        ...state,
-        byId: items
-      };
-    }
+    [dataLoaded]: (state, { payload }) => dataSorter(payload.items)
   }
 });
 

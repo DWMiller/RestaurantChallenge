@@ -7,9 +7,7 @@ const menuSlice = createSlice({
   initialState: null,
   reducers: {},
   extraReducers: {
-    [dataLoaded]: (state, { payload }) => {
-      return payload.menu;
-    }
+    [dataLoaded]: (state, { payload }) => payload.menu
   }
 });
 
