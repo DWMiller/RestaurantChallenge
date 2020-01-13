@@ -32,6 +32,10 @@ const Container = styled(NavLink)`
     transition: all 0.3s ease 0s;
   }
 
+  &:focus {
+    outline: none;
+  }
+
   &.active,
   &:hover {
     .sectionLabel::after {
