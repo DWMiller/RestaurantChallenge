@@ -1,13 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { dataLoaded } from './actions';
+import { fetchData } from './actions';
 
 const menuSlice = createSlice({
   name: 'menu',
   initialState: null,
   reducers: {},
   extraReducers: {
-    [dataLoaded]: (state, { payload }) => payload.menu
+    [fetchData.fulfilled]: (state, { payload }) => payload.result.menu
   }
 });
 
